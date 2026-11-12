@@ -1,0 +1,29 @@
+{
+  "name": "ReloadTransaction",
+  "type": "object",
+  "properties": {
+    "kwh_added": {
+      "type": "number",
+      "description": "kWh purchased in this reload"
+    },
+    "amount_paid_zar": {
+      "type": "number",
+      "description": "Amount paid in South African Rands"
+    },
+    "balance_after": {
+      "type": "number",
+      "description": "kWh balance immediately after this reload"
+    },
+    "balance_before": {
+      "type": "number",
+      "description": "kWh balance before this reload"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "kwh_added",
+    "amount_paid_zar"
+  ]
+}

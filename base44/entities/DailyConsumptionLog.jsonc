@@ -1,0 +1,31 @@
+{
+  "name": "DailyConsumptionLog",
+  "type": "object",
+  "properties": {
+    "log_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date this log entry is for"
+    },
+    "kwh_used": {
+      "type": "number",
+      "description": "kWh consumed on this date"
+    },
+    "balance_start": {
+      "type": "number",
+      "description": "kWh at start of day"
+    },
+    "balance_end": {
+      "type": "number",
+      "description": "kWh at end of day"
+    },
+    "day_of_week": {
+      "type": "string",
+      "description": "Day name e.g. Monday"
+    }
+  },
+  "required": [
+    "log_date",
+    "kwh_used"
+  ]
+}

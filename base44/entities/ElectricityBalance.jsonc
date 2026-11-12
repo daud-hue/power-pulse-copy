@@ -1,0 +1,29 @@
+{
+  "name": "ElectricityBalance",
+  "type": "object",
+  "properties": {
+    "current_kwh": {
+      "type": "number",
+      "description": "Current remaining kWh balance"
+    },
+    "estimated_daily_kwh": {
+      "type": "number",
+      "description": "AI-refined estimated daily consumption in kWh"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of last balance update"
+    },
+    "initial_kwh": {
+      "type": "number",
+      "description": "kWh at the start of the current reload cycle"
+    },
+    "cycle_start": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the current reload cycle started"
+    }
+  },
+  "required": []
+}

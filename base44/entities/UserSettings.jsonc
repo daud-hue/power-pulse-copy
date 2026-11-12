@@ -1,0 +1,103 @@
+{
+  "name": "UserSettings",
+  "type": "object",
+  "properties": {
+    "daily_kwh_estimate": {
+      "type": "number",
+      "description": "Estimated average daily kWh consumption"
+    },
+    "alert_thresholds": {
+      "type": "array",
+      "description": "List of percentage thresholds for low-balance alerts (e.g. [20, 10, 5])",
+      "items": {
+        "type": "number"
+      }
+    },
+    "reload_reminder_kwh": {
+      "type": "number",
+      "description": "Notify when remaining kWh drops below this value"
+    },
+    "reload_reminder_days": {
+      "type": "number",
+      "description": "Notify when remaining days drops below this value"
+    },
+    "onboarding_complete": {
+      "type": "boolean",
+      "default": false
+    },
+    "dismissed_tips": {
+      "type": "array",
+      "description": "IDs of dismissed saving tips",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notification_mode": {
+      "type": "string",
+      "enum": [
+        "email",
+        "inapp",
+        "both"
+      ],
+      "default": "email",
+      "description": "How to deliver alerts: email only, in-app only, or both"
+    },
+    "high_usage_alert_enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "high_usage_threshold_percent": {
+      "type": "number",
+      "default": 150
+    },
+    "reminder_9am": {
+      "type": "boolean",
+      "default": true
+    },
+    "reminder_12pm": {
+      "type": "boolean",
+      "default": true
+    },
+    "reminder_4pm": {
+      "type": "boolean",
+      "default": false
+    },
+    "reminder_8pm": {
+      "type": "boolean",
+      "default": true
+    },
+    "calendar_sync_enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "monthly_budget_zar": {
+      "type": "number",
+      "default": 0,
+      "description": "Monthly electricity spend limit in ZAR for budget tracking"
+    },
+    "address": {
+      "type": "string",
+      "description": "User's physical street address"
+    },
+    "city": {
+      "type": "string",
+      "description": "User's city or suburb"
+    },
+    "province": {
+      "type": "string",
+      "description": "South African province",
+      "enum": [
+        "Eastern Cape",
+        "Free State",
+        "Gauteng",
+        "KwaZulu-Natal",
+        "Limpopo",
+        "Mpumalanga",
+        "North West",
+        "Northern Cape",
+        "Western Cape"
+      ]
+    }
+  },
+  "required": []
+}

@@ -1,0 +1,38 @@
+{
+  "name": "SavingTip",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "description": "The tip text"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "geyser",
+        "lighting",
+        "appliances",
+        "general",
+        "peak_hours",
+        "standby"
+      ],
+      "description": "Category of the saving tip"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Lucide icon name for this tip"
+    },
+    "dismissed": {
+      "type": "boolean",
+      "default": false
+    },
+    "priority": {
+      "type": "number",
+      "description": "Higher = more important"
+    }
+  },
+  "required": [
+    "message",
+    "category"
+  ]
+}

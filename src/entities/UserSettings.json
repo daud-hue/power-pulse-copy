@@ -1,0 +1,72 @@
+{
+  "name": "UserSettings",
+  "type": "object",
+  "properties": {
+    "daily_kwh_estimate": {
+      "type": "number",
+      "description": "Estimated average daily kWh consumption"
+    },
+    "alert_thresholds": {
+      "type": "array",
+      "description": "List of percentage thresholds for low-balance alerts (e.g. [20, 10, 5])",
+      "items": {
+        "type": "number"
+      }
+    },
+    "reload_reminder_kwh": {
+      "type": "number",
+      "description": "Notify when remaining kWh drops below this value"
+    },
+    "reload_reminder_days": {
+      "type": "number",
+      "description": "Notify when remaining days drops below this value"
+    },
+    "onboarding_complete": {
+      "type": "boolean",
+      "default": false
+    },
+    "dismissed_tips": {
+      "type": "array",
+      "description": "IDs of dismissed saving tips",
+      "items": {
+        "type": "string"
+      }
+    },
+    "high_usage_alert_enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Alert when daily usage exceeds threshold"
+    },
+    "high_usage_threshold_percent": {
+      "type": "number",
+      "default": 150,
+      "description": "Alert when today's usage exceeds this % of daily estimate"
+    },
+    "reminder_9am": {
+      "type": "boolean",
+      "default": true,
+      "description": "9am log reminder"
+    },
+    "reminder_12pm": {
+      "type": "boolean",
+      "default": true,
+      "description": "12pm log reminder"
+    },
+    "reminder_4pm": {
+      "type": "boolean",
+      "default": false,
+      "description": "4pm log reminder"
+    },
+    "reminder_8pm": {
+      "type": "boolean",
+      "default": true,
+      "description": "8pm log reminder"
+    },
+    "calendar_sync_enabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Create Google Calendar events for reloads"
+    }
+  },
+  "required": []
+}
